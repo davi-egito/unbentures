@@ -1,6 +1,0 @@
-[submodule "PyAdventures"]
-	path = PyAdventures
-	url = https://github.com/zucomania/PyAdventures.git
-[submodule "C-Adventures"]
-	path = C-Adventures
-	url = https://github.com/zucomania/C-Adventures.git
