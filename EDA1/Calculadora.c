@@ -8,43 +8,43 @@ int main()
 {
     int number;
     do {
-        printf("\n*** Ola, seja bem-vindo a calculadora que mostra o resultado que voce quer na tela ***\n");
-        printf("Digite abaixo 1 para somar, 2 para subtrair, 3 para multiplicar e 4 para dividir!\n");
+        printf("\n*** Hello, and welcome to this simples task calculator! ***\n");
+        printf("Type 1 to sum, 2 to subtract, 3 to multiply and 4 to divide!\n");
         scanf(" %d", &number);
             if (number == 1) {
-                int somado_1;
-                int somado_2;
-                int soma_total;
-                printf("Digite o primeiro número a ser somado\n");
-                scanf("%d", &somado_1);
-                printf("Digite o segundo número a ser somado\n");
-                scanf("%d", &somado_2);
-                printf("O resultado foi %d\n", somado_1 + somado_2);
+                int sum_1;
+                int sum_2;
+                int sum_total;
+                printf("Type the first number to be added\n");
+                scanf("%d", &sum_1);
+                printf("Type the second number to be added\n");
+                scanf("%d", &sum_2);
+                printf("O resultado foi %d\n", sum_1 + sum_2);
             } else if (number == 2) {
                 int subt_1;
                 int subt_2;
                 int subt_total;
-                printf("Digite o primeiro número na subtração\n");
+                printf("Type the first number to be added\n");
                 scanf("%d", &subt_1);
-                printf("Digite o segundo número na subtração\n");
+                printf("Type the second number to be added");
                 scanf("%d", &subt_2);
                 printf("O resultado foi %d\n", subt_1 - subt_2); 
             } else if (number == 3) {
                 int mult_1;
                 int mult_2;
                 int mult_total;
-                printf("Digite o primeiro número na multiplicação\n");
+                printf("Type the first number to be added\n");
                 scanf("%d", &mult_1);
-                printf("Digite o segundo número na multiplicação\n");
+                printf("Type the second number to be added");
                 scanf("%d", &mult_2);
                 printf("O resultado foi %d\n", mult_1 * mult_2); 
             } else if (number == 4) {
                 int div_1;
                 int div_2;
                 int div_total;
-                printf("Digite o primeiro número na divisão\n");
+                printf("Type the first number to be added");
                 scanf("%d", &div_1);
-                printf("Digite o segundo número na divisão\n");
+                printf("Type the second number to be added");
                 scanf("%d", &div_2);
                 printf("O resultado foi %d\n", div_1 / div_2); 
             }
