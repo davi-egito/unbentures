@@ -1,3 +1,5 @@
+import classes
+
 Class Point:
   def__init__(self,x,y):
     self.__x=x
