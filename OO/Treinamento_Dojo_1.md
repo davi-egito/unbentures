@@ -26,3 +26,16 @@ Resposta: Proteção de dados contra acesso e modificação direta por outras cl
 
 Pergunta: Como diferenciar classe de objeto em OO?
 Resposta: O objeto é uma instância de uma classe. O objeto "Mobi" faz parte da classe "Carro". E a classe reúne objetos com características similares.
+
+UML: Linguagem de modelagem unificada {
+  Documentação completa (código/implementação);
+  Estruturada com foco no paradigma;
+  Rascunho (desenvolvedores ágeis);
+}
+
+1. Lista de substantivos (classes ou atributos) e verbos (métodos de classe): texto descritivo sobre o que se pretende realizar;
+- Calculadora;
+- Formas geométricas (ponto, linha, círculo);
+- Calcular: área, perímetro, distância entre pontos, interferência entre formas geométricas; contruir forma; imprimir ponto;
+- Ponto: x, y
+- Linha: são dois novos pontos
