@@ -19,6 +19,7 @@ class materias_a_cursar: #as matérias que o aluno ainda não cursou.
     def __init__(self):
         
 class materias_cursando: #as matérias que o aluno está cursando no presente semestre.
+    def __init__(self):
     
 """Criar menu para a pessoa colocar quais matérias já cursou, ainda vai cursar ou está cursando - implementar
 com interface gráfica se possível. Talvez criar um sistema de login para salvar as informações do aluno?
