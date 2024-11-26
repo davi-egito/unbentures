@@ -1,5 +1,5 @@
 .data
-ola: .asciiz "Ola Mundo!\n"
+ola: .asciiz "Ola Mundo\n"
 
 .text
 
