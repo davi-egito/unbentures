@@ -47,3 +47,4 @@
     #encerrando o programa
     li $v0, 10
     syscall
+    
