@@ -6,6 +6,11 @@
 #define TAM_MAX_MEDIDAS 100
 #define TAM_MAX_NOME_CIDADE 20
 
+/*Suponha que você seja um cientista de dados trabalhando em uma empresa de análise climática. Você
+precisa analisar as temperaturas diárias de várias cidades ao longo de um período indefinido. As temperaturas
+são fornecidas uma por uma e não há um número fixo de dias para análise, o que torna necessário o uso de
+alocação dinâmica de memória para armazenar essas temperaturas.*/
+
 //Struct de tipos
 struct tipos {
     int qtde_dias;
@@ -30,6 +35,7 @@ vetor de medidas e colocar qtde_medidas igual a zero;*/
     struct tipos qtde_medidas;
     struct tipos vetor_medidas;
           tipos = fopen("tipos.h", "r");
+          TTemperaturas *vetor_medidas = (TTemperaturas *) malloc(sizeof(TTemperaturas) * qtde_dias);
           if (tipos.h == NULL) {
             printf("Erro ao abrir o arquivo\n");
             return 1;
@@ -40,6 +46,7 @@ vetor de medidas e colocar qtde_medidas igual a zero;*/
             int *qtde_dias; //quantidade de dias de registros de temperaturas
             int *qtde_medidas; //quantidade de medidas
             int *vetor_medidas; //vetor de medidas   
+
           }
           fclose(tipos.h);
 }
@@ -49,15 +56,20 @@ adicionar esta medida ao vetor de temperaturas;*/
     FILE *tipos.h;
     struct tipos cidade;
     struct tipos temperatura;
+    int i = 20; //contador
           fopen("tipos.h", "r"); /*talvez tenha de escrever e não somente ler porque terá de add a medida 
           ao vetor de temperatura*/
+          scanf("Digite o nome de uma cidade:\n%c", cidade);
+          scanf("Digite uma temperatura:\n%f", temperatura);
           if (tipos.h == NULL) {
             printf("Erro ao abrir o arquivo\n");
             return 1;
           }
           else {
             printf("Você escolheu a opção Inserir Medida com sucesso!\n");
-            
+            for int i = 0; i < 20; i++ {
+              
+            }
           }
           fclose(tipos.h);
 }
@@ -74,6 +86,7 @@ cidade e temperatura) e a maior temperatura (o nome da cidade e temperatura);*/
           }
           else {
             printf("Você escolheu a opção Estatística com sucesso!\n");
+
           }
           fclose(tipos.h);
 }
