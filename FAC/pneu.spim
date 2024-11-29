@@ -2,6 +2,10 @@
     espaco: .asciiz "\\n"
     texto: .asciiz "Digite a pressão desejada: "
 .text
+
+.globl main
+
+main:
     li $v0, 4
     la $a0, texto
     syscall
