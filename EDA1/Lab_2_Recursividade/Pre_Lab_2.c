@@ -11,14 +11,18 @@ int AckermannRecursivo(int m, int n) {
     return AckermannRecursivo(m - 1, AckermannRecursivo(m, n - 1));
   }
 }
-
+// Não roda se os números forem muito grandes pq o scanf fica meio travado - consertar isso.
 int main () {
   int m;
   int n;
-  printf("Digite o valor de m: "); //validar se é um inteiro positivo
-  scanf("%d", &m);
-  printf("Digite o valor de n: ");
-  scanf("%d", &n);
+  do {
+    printf("Digite um valor inteiro positivo para m: ");
+    scanf("%d", &m);
+  } while (m < 0);
+  do {
+    printf("Digite um valor inteiro positivo para n: ");
+    scanf("%d", &n);
+  } while (n < 0);
   printf("O resultado da função de Ackermann é: %d\n", AckermannRecursivo(m, n));
   return 0;
 }
