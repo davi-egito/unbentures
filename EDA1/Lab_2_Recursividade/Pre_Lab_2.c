@@ -2,9 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int AckermannRecursivo () {
-  int m;
-  int n;
+int AckermannRecursivo(int m, int n) {
   if (m == 0) {
     return n + 1;
   } else if (m > 0 && n == 0) {
@@ -17,7 +15,7 @@ int AckermannRecursivo () {
 int main () {
   int m;
   int n;
-  printf("Digite o valor de m: ");
+  printf("Digite o valor de m: "); //validar se é um inteiro positivo
   scanf("%d", &m);
   printf("Digite o valor de n: ");
   scanf("%d", &n);
