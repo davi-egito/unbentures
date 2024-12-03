@@ -1,0 +1,35 @@
+.data
+i: "Digite um valor para i: "
+j: "Digite um valor para j: "
+N: "Digite um valor para N: "
+
+.text
+.globl main
+
+main:
+  li $v0, 4
+  la $a0, i
+  syscall
+  
+  li $v0, 5
+  syscall
+  move $t0, $v0
+
+  li $v0, 4
+  la $a0, j
+  syscall
+
+  li $v0, 5
+  syscall
+  move $t1, $v0
+
+  li $v0, 4
+  la $a0, N
+  syscall
+
+  li $v0, 5   
+  syscall
+  move $t2, $v0
+
+  lw $t3, 4 * $t1($s0)
+  add $t4, $t1, $t2
