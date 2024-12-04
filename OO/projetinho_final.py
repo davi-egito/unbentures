@@ -42,6 +42,8 @@ Métodos de Desenvolvimento de Software[9]: Interação Humano Computador; Quali
 Estrutura de Dados[5]: Compiladores 1; Paradigmas de Programação; Estrutura de Dados 2; Programação para Sistemas Paralelos e Distribuídos; Projeto e Análise de Algoritmos;
 Desenho Industrial Assistido por Computador[1]
 Engenharia e Ambiente[1]
+Estágio Supervisionado[1]
+Trabalho de Conclusão de Curso 1[2]: Trabalho de Conclusão de Curso 2;
 Física 1[1]
 Física 1 Experimental[1]
 Humanidades e Cidadania[1]
@@ -49,5 +51,4 @@ Introdução à Engenharia[1]
 Engenharia Econômica[2]: Gestão da Produção e Qualidade; Qualidade de Software 1;
 Matemática Discreta 1[3]: Matemática Discreta 2; Sistemas de Banco de Dados 1; Sistemas de Banco de Dados 2;
 Introdução à Álgebra Linear[6]: TED/PED1; Fundamentos de Arquitetura de Computadores; Fundamentos de Sistemas Operacionais; Fundamentos de Redes de Computadores; Programação para Sistemas Paralelos e Distribuídos [sequência acaba aqui]; Fundamentos de Sistemas Embarcados.
-
 """
