@@ -4,11 +4,11 @@ Você não pode recorrer às operações aritméticas de multiplicação, divis�
 #include <stdio.h>
 #include <stdlib.h>
 
-int div(int m, int n){
+int division(int m, int n){
     if(m < n){
         return 0;
     }
-    return 1 + div(m-n, n);
+    return 1 + division(m-n, n);
 }
 
 int main() {
@@ -17,6 +17,6 @@ int main() {
     scanf("%d", &m);
     printf("Insira o divisor: ");
     scanf("%d", &n);
-    printf("O resultado da divisão inteira de %d por %d é: %d\n", m, n, div(m, n));
+    printf("O resultado da divisão inteira de %d por %d é: %d\n", m, n, division(m, n));
     return 0;
 }
