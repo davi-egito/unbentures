@@ -10,3 +10,13 @@ int div(int m, int n){
     }
     return 1 + div(m-n, n);
 }
+
+int main() {
+    int m, n;
+    printf("Insira o dividendo: ");
+    scanf("%d", &m);
+    printf("Insira o divisor: ");
+    scanf("%d", &n);
+    printf("O resultado da divisão inteira de %d por %d é: %d\n", m, n, div(m, n));
+    return 0;
+}
