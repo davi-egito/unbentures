@@ -13,9 +13,9 @@ main:
   move $t2, $v0
 
   mul $t3, $t0, 4
-  add $t4, $s0, $t5
+  add $t4, $s0, $t3
   mul $t5, $t1, 4
-  add $t6, $s0, $t4
+  add $t6, $s0, $t5
   lw $t7, 0($t6)
   add $t8, $t7, $t2
   sw $t8, 0($t4)
