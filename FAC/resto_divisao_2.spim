@@ -4,30 +4,27 @@
 .globl main
 
 main:
-    li $v0, 5             
+    li $v0, 5
     syscall
-    move $t0, $v0         
+    move $t0, $v0
 
-    li $v0, 5              
+    li $v0, 5
     syscall
-    move $t1, $v0        
+    move $t1, $v0
 
-    li $t2, 1      
-
+    li $t2, 1
 calcula_potencia:
-    beqz $t1, fim_potencia 
-    sll $t2, $t2, 1        
-    subi $t1, $t1, 1       
-    j calcula_potencia     
-
+    beqz $t1, fim_potencia
+    sll $t2, $t2, 1
+    subi $t1, $t1, 1
+    j calcula_potencia
 fim_potencia:
-    divu $t3, $t0, $t2     
-    mfhi $t4               
+    divu $t3, $t0, $t2
+    mfhi $t4
 
-    li $v0, 1              
-    move $a0, $t4          
+    li $v0, 1
+    move $a0, $t4
     syscall
 
-    li $v0, 10             
+    li $v0, 10
     syscall
-
