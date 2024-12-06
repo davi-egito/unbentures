@@ -1,11 +1,3 @@
-.data
-i: "Digite um valor para i: "
-j: "Digite um valor para j: "
-N: "Digite um valor para N: "
-
-.text
-.globl main
-
 main:
   li $v0, 4
   la $a0, i

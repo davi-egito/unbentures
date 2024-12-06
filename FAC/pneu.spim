@@ -1,14 +1,10 @@
 .data
-    texto: .asciiz "Digite a pressão desejada: "
 
 .text
 
 .globl main
 
 main:
-    li $v0, 4
-    la $a0, texto
-    syscall
 
     li $v0, 5
     syscall

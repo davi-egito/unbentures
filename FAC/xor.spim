@@ -20,7 +20,7 @@ laco2:
     syscall
     beq $v0, $t9, laco2
     move $t1, $v0
-    beq $t1, $t0, imprime1
+    beq $t0, $t1, imprime1
     li $v0, 1
     li $a0, 2
     syscall
