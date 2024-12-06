@@ -1,30 +1,28 @@
 main:
-  li $v0, 4
-  la $a0, i
-  syscall
   
   li $v0, 5
   syscall
   move $t0, $v0
 
-  li $v0, 4
-  la $a0, j
-  syscall
-
   li $v0, 5
   syscall
   move $t1, $v0
-
-  li $v0, 4
-  la $a0, N
-  syscall
 
   li $v0, 5   
   syscall
   move $t2, $v0
 
-  lw $t3, $t1($s0)
-  add $t4, $t1, $t2
+  mul $t3, $t0, 4
+  add $t4, $s0, $t5
+  mul $t5, $t1, 4
+  add $t6, $s0, $t4
+  lw $t7, 0($t6)
+  add $t8, $t7, $t2
+  sw $t8, 0($t4)
+
+  li $v0, 1
+  move $a0, $t8
+  syscall
 
   li $v0, 10
   syscall
