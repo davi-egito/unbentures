@@ -1,6 +1,6 @@
 .data
-prompt: .asciiz "Digite um número inteiro: \n"
-result: .asciiz "O resto da divisão por 2 é: "
+prompt: .asciiz "Digite um numero inteiro: \n"
+result: .asciiz "O resto da divisao por 2 e: "
 
 .text
 .globl main
