@@ -1,0 +1,23 @@
+contaBits:
+li $t0, 0
+li $t3, 0
+
+loop: 
+beq $a0, $zero, fim
+
+andi $t2, $a0, 1
+bne $t2, $zero, incrementa
+
+srl $a0, $a0, 1
+addi $t3, $t3, 1
+j loop
+
+incrementa:
+addi $t0, $t0, 1
+srl $a0, $a0, 1
+addi $t3, $t3, 1
+j loop
+
+fim:
+move $v0, $t0
+jr $ra

@@ -1,0 +1,39 @@
+.data
+
+.text
+.globl xor
+
+xor:
+    li $v0, 5
+    syscall
+    move $s0, $v0
+
+laco1:
+    beq $s0, $zero, termina
+    li $v0, 12
+    syscall
+    move $t0, $v0
+    li $t9, 32
+
+laco2:
+    li $v0, 12
+    syscall
+    beq $v0, $t9, laco2
+    move $t1, $v0
+    beq $t1, $t0, imprime1
+    li $v0, 1
+    li $a0, 2
+    syscall
+    addi $s0, $s0, -1
+    j laco1
+
+imprime1:
+    li $v0, 1
+    li $a0, 1
+    syscall
+    addi $s0, $s0, -1
+    j laco1
+
+termina:
+    li $v0, 10
+    syscall

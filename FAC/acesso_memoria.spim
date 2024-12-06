@@ -31,5 +31,8 @@ main:
   syscall
   move $t2, $v0
 
-  lw $t3, 4 * $t1($s0)
+  lw $t3, $t1($s0)
   add $t4, $t1, $t2
+
+  li $v0, 10
+  syscall
