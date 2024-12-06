@@ -1,0 +1,50 @@
+.data
+
+.text
+.globl main
+
+main:
+  
+    la $a0, vetor          
+    lw $a1, tam            
+
+    jal elemDistintos
+
+    li $v0, 1            
+    move $a0, $v0          
+    syscall
+
+    li $v0, 10
+    syscall
+
+elemDistintos:
+    
+    beq $a1, $zero, vazio  
+    li $v0, 1              
+
+    move $t0, $a0          
+    addi $t1, $t0, 4       
+    addi $a1, $a1, -1      
+
+loop:
+    beq $a1, $zero, fim    
+
+    lw $t2, 0($t0)         
+    lw $t3, 0($t1)         
+
+    beq $t2, $t3, iguais   
+    addi $v0, $v0, 1       
+
+iguais:
+    
+    addi $t0, $t0, 4       
+    addi $t1, $t1, 4       
+    addi $a1, $a1, -1      
+    j loop                 
+
+fim:
+    jr $ra                 
+
+vazio:
+    li $v0, 0              
+    jr $ra                 
