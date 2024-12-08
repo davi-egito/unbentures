@@ -4,6 +4,8 @@ Here's a calculator to help you with simples tasks. You might insert two numbers
 
 //It must have a menu and use can randomize the number of items.
 
+//It must have a menu and use can randomize the number of items.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,7 +22,7 @@ int main() {
             indice = rand() % 10;
             printf("Produto %d: %s\n", i+1, produto[indice]);
         }
-    } else if (escolha == 2) {
+    } if (escolha == 2) {
         printf("Quantos produtos você quer adicionar?\n");
         scanf("%d", &quant_final);
         for (i = 0; i < quant_final; i++) {
@@ -28,8 +30,8 @@ int main() {
             scanf("%s", produto[i]);
         }
     } else {
-        printf("Opção inválida.\n");
-    }
+        break;
+    } 
     } while (escolha == 1 || 2);
     return 0;
 }
