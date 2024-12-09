@@ -19,7 +19,7 @@ int Repete2(int pnumero, int pdigito){
     }
     pdiv = pnumero/10;
     pdig = (pnumero - pdiv*10);
-    if (pdig == pdigito){return Repete2(pdiv, pdigito+1);}
+    if (pdig == pdigito){return Repete2(pdiv, pdigito+1);} //falta o contador de repetições
     return Repete2(pdiv, pdigito);
 }
 int Repete3(int pnumero, int pdigito, int pqtde){
@@ -48,7 +48,8 @@ int Repete4(int pnumero, int pdigito, int pqtde){
         pdiv = pnumero/10;
         pdig = (pnumero - pdiv*10);
 
-        if (pdig == pdigito){return Repete4(pdiv, pdigito, pqtde+1);}
+        if (pdig == pdigito){return Repete4(pdiv, pdigito, pqtde+1);} //o pqtde não está sendo incrementado corretamente 
+        //porque a função está retornando o valor da chamada recursiva
         return Repete4(pdiv, pdigito, pqtde);
     }
 }
