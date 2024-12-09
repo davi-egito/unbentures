@@ -1,0 +1,12 @@
+.data
+
+.text
+
+.globl main
+
+main:
+    addu $t0, $s0, $zero
+    # Agora precisa verificar se $s0 + $s1 > 2^32 - 1
+    nor $t1, $s0, $zero #$t1 = 2^32 - $s0 - 1
+    slt $t2, $s1, $t1 #$s1 < $t1 = 2^32 -$s0 -1
+    bne $t2, $zero, sem_overflow #$s0 + $s1 < 2^32 - 1
