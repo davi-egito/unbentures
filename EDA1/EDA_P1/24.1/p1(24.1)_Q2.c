@@ -1,27 +1,27 @@
 #include <stdio.h>
-void Q2(char *str){
-    int n = strlen(str);
-    for (int i = 0; i < n-1; i++)
-    {
-        for (int j = i+1; j < n; j++)
-        {
-            printf("str[j %d]: %c\n", j, str[j]);
-            printf("str[i %d]: %c\n", j, str[i]);
-            if (str[j] > str[i])
-            {
-                char temp = str[i];
-                str[i] = str[j];
-                str[j] = temp;
+#include <string.h> // Para a função strlen
+
+// Função que ordena os caracteres de uma string em ordem decrescente
+void Q2(char *str) {
+    int n = strlen(str); // Obtém o comprimento da string
+    for (int i = 0; i < n-1; i++) { // Loop externo: percorre cada caractere da string até o penúltimo
+        for (int j = i+1; j < n; j++) { // Loop interno: percorre os caracteres à direita de 'i'
+            printf("str[j %d]: %c\n", j, str[j]); // Imprime o caractere atual do loop interno
+            printf("str[i %d]: %c\n", i, str[i]); // Imprime o caractere atual do loop externo
+            if (str[j] > str[i]) { // Se o caractere em 'j' for maior que o caractere em 'i'
+                char temp = str[i]; // Armazena o caractere em 'i' em uma variável temporária
+                str[i] = str[j]; // Atribui o caractere em 'j' para a posição 'i'
+                str[j] = temp; // Atribui o valor armazenado em 'temp' para a posição 'j'
             }    
         }  
     }
 }
-// CONSIDERE QUE UM PROGRAMA PRINCIPAL HA UMA VARIAVEL PN (VETOR DE CHAR) CONTENDO SEU PRIMEIRO NOME EM LETRAS MINUSCULAS. 
-// QUAL O CONTEUDO DESTA VARIAVEL PN APOS A EXECUCAO DA FUNCAO Q2 NO CASO DE VOCE INVOCAR PASSANDO PN COMO PARAMETRO DE ENTRADA
+
+// Programa principal que testa a função Q2
 int main() {
-    char str[] = "thales";
-    printf("String antes da ordenacao: %s\n", str);
-    Q2(str);
-    printf("String depois da ordenacao: %s\n", str);
-    return 0;
+    char str[] = "davi"; // Define uma string de exemplo
+    printf("String antes da ordenacao: %s\n", str); // Imprime a string antes da ordenação
+    Q2(str); // Chama a função Q2 para ordenar a string
+    printf("String depois da ordenacao: %s\n", str); // Imprime a string após a ordenação
+    return 0; // Retorna 0 para indicar que o programa terminou com sucesso
 }
