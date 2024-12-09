@@ -1,0 +1,26 @@
+.data
+
+.text
+
+.globl main
+
+main:
+    # detectando overflor na soma de $s0 e $s1
+    addu $t0, $s0, $s1
+    # se os sinais de $s0 e $s1 forem diferentes, não há overflow
+    xor $t1, $s0, $s1
+    # se $t1 < 0, os sinais são diferentes, então não há overflow
+    slt $t2, $t1, $zero
+    bne $t2, $zero, sem_overflow
+    # se o resultado tiver sinal diferente, houve overflow
+    xor $t1, $t0, $s0
+    slt $t2, $t1, $zero
+    bne $t2, $zero, overflow
+
+sem_overflow:
+    li $v0, 10
+    syscall
+
+overflow:
+    li $v0, 17
+    syscall
