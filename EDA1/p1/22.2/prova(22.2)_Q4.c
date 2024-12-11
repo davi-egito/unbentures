@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int Repete1(int pnumero, int pdigito){
-    int pdig, pdiv, pcont = 0;
+    int pdig, pdiv, pcont = 0; //pcont foi inicializado corretamente
     if (pnumero <10)
     {
         if (pnumero == pdigito){return 1;} 
@@ -7,8 +10,8 @@ int Repete1(int pnumero, int pdigito){
     }
     pdiv = pnumero/10;
     pdig = (pnumero - pdiv*10);
-    if (pdig == pdigito){pcont = 1;}
-    return pcont + Repete1(pdiv, pdigito);
+    if (pdig == pdigito){pcont = 1;} //aqui ocorra um incremento da contagem
+    return pcont + Repete1(pdiv, pdigito); //aqui a contagem é somada com a chamada recursiva
 }
 int Repete2(int pnumero, int pdigito){
     int pdig, pdiv;
@@ -19,7 +22,7 @@ int Repete2(int pnumero, int pdigito){
     }
     pdiv = pnumero/10;
     pdig = (pnumero - pdiv*10);
-    if (pdig == pdigito){return Repete2(pdiv, pdigito+1);} //falta o contador de repetições
+    if (pdig == pdigito){return Repete2(pdiv, pdigito+1);}
     return Repete2(pdiv, pdigito);
 }
 int Repete3(int pnumero, int pdigito, int pqtde){
@@ -41,15 +44,14 @@ int Repete4(int pnumero, int pdigito, int pqtde){
     int pdig, pdiv;
     if (pnumero <10)
     {
-        if (pnumero == pdigito){return 1;} 
+        if (pnumero == pdigito){return 1;} //faltou o parâmetro pqtde
         else {return 0;}
     } else
     {
         pdiv = pnumero/10;
         pdig = (pnumero - pdiv*10);
 
-        if (pdig == pdigito){return Repete4(pdiv, pdigito, pqtde+1);} //o pqtde não está sendo incrementado corretamente 
-        //porque a função está retornando o valor da chamada recursiva
+        if (pdig == pdigito){return Repete4(pdiv, pdigito, pqtde+1);}
         return Repete4(pdiv, pdigito, pqtde);
     }
 }
