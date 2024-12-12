@@ -1,0 +1,30 @@
+.data
+
+n: .asciiz "\n"
+mensagem: .asciiz "Digite o numero de linhas da piramide: "
+
+.text
+
+.globl main:
+
+main:
+    li $v0, 4
+    la $a0, mensagem
+    syscall
+
+    li $v0, 5
+    syscall
+    move $t0, $v0
+
+#pensar na formula para a piramide
+
+#impressao piramide 1
+
+#espaco entre as piramides
+    li $v0, 4
+    la $a0, n
+    syscall
+
+#impressao piramide 2
+
+

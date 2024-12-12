@@ -1,0 +1,17 @@
+#acho que da para aplicar uma mascara aqui - talvez usando xor ou nor
+.data
+
+.text
+
+.globl main
+
+main:
+
+    li $v0, 5
+    syscall
+    move $t0, $v0
+
+#talvez usar um beq ou bne para fazer um shift nos bits e ele analisar o proximo
+
+
+  

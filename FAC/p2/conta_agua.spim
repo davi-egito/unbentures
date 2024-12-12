@@ -1,0 +1,18 @@
+#basicamente uma funcao que altera a depender da quantidade consumida de agua 
+
+.data
+
+.text
+
+.globl main
+
+main:
+    li $v0, 5
+    syscall
+    move $t0, $v0
+
+#em algum ponto aqui talvez fosse interessante usar o beq ou bne e comparar com um valor carregado
+
+
+
+
