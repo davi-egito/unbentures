@@ -26,8 +26,8 @@ int Q5(char vetor[], int tamanho){
 // Qual tipo de ordenacao da funcao q4?
 
 int main(){
-    char nc[] = "santos";
-    int res = Q5(nc, 5); // last nome, qtd de letras last nome;
+    char nc[] = "coelho";
+    int res = Q5(nc, 6); // last nome, qtd de letras last nome;
     printf("resposta = %d\n\n", res);
     return 0;
 }

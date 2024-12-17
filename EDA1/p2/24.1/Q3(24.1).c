@@ -15,7 +15,6 @@ int Q3(char *nome, int tamanho, int matricula){
 // qual resultado passando os parametros abaixo?
 // letras do seu nome completo em ordem alfabetica e com os espaços no inicio ex. "thales henrique euflauzino dos santos" -> "    aaadeeefhhiillnnnooqrsssstttuuuz"
 int main(){
-    int res = Q3("    aaadeeefhhiillnnnooqrsssstttuuuz", 37, 222006178); // letras do nome em ordem alfabetica com espacos no inicio, n de chars do nome, matricula;
+    int res = Q3("davi marques do egito coelho", 28, 231030421); // letras do nome em ordem alfabetica com espacos no inicio, n de chars do nome, matricula;
     printf("\n\nresultado = %d\n\n", res);
-    // "    aaadeeefhhiillnnnooqrsssstttuuuz"
 }

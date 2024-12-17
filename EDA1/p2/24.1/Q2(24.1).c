@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 char letra(int P)
 {
     P = P % 26; // 78/26, 26+26 = 52 + 26 = 78
@@ -21,6 +23,6 @@ int Q2(char *nc, int matricula)
 // QUAL RESUTADO PASSANDO NOME COMPLETO E MATRICULA COMO PARAMETROS?
 
 int main(){
-    int res = Q2("thales henrique euflauzino dos santos", 222006178);
+    int res = Q2("davi marques do egito coelho", 231030421);
     printf("resposta = %d\n\n", res); 
 }
