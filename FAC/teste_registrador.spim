@@ -1,6 +1,10 @@
-.data # Diretiva de dados
-  idade: .word 40  # idade = 40 
-.text # Diretiva de texto
-  lw $t0,idade # $t0 = idade
-  li $v0, 10 #Sair do programa
-  syscall #Executa
+.data 
+  idade: .word 40  
+.text 
+
+.globl main
+
+main:
+  lw $t0,idade
+  li $v0, 10 
+  syscall 
