@@ -5,6 +5,6 @@
 .globl main
 
 main:
-  lw $t0,idade
+  la $a0,idade
   li $v0, 10 
   syscall 
