@@ -1,0 +1,17 @@
+# Autor: digite seu nome aqui
+# Data: ___/____/ _____
+# Descrição: Informe aqui qual o propósito do programa. 
+.data​
+​# Diretiva de dados
+# Área de segmentação de dados: 
+# Aqui são definidas as constantes e as variáveis do programa 
+
+.text
+​​# Diretiva de texto
+# Área de segmentação de texto: 
+# Aqui ficam as instruções MIPS do código do programa 
+
+.globl main
+# Diretiva global 
+
+main:
