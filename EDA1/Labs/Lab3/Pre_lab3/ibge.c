@@ -15,6 +15,33 @@ struct municipio {
     char porte[20]; //porte do municipio
 };
 
+void informacoes(struct municipio *m){
+  FILE *dados; 
+  struct municipio mun;
+  dados = fopen("ibge.csv", "r");
+   if (dados != NULL){
+      char linha[200];
+      fscanf(dados, "%[^\n]\n", linha);
+      while (!feof(dados)) {
+        fscanf (dados, "%[2], %[^;], %d, %[^;], %d, %[^;]\n", 
+        mun.uf, 
+        mun.nome, 
+        &mun.codigo, 
+        mun.regiao, 
+        &mun.populacao, 
+        mun.porte);
+        printf("Municipio: %s\n", mun.nome);
+        printf("UF: %s\n", mun.uf);
+        printf("Regiao: %s\n", mun.regiao);
+        printf("Populacao em 2010: %d\n", mun.populacao);
+        printf("Porte: %s\n", mun.porte);
+      }
+      fclose(dados);
+   } else {
+      printf("Erro ao abrir o arquivo\n"); 
+   }
+}
+
 int buscaBinaria(int *V, int n, int chave){
   int p, inicio, final, meio;
   inicio = 0;
@@ -33,10 +60,6 @@ int buscaBinaria(int *V, int n, int chave){
 
 int main () {
     BuscaIBGE();
-    printf(); //municipio
-    printf(); //estado
-    printf(); //regiao
-    printf(); //populacao em 2010
-    printf(); //porte
+    informacoes();
     return 0;
 }
